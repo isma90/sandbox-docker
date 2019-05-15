@@ -9,6 +9,7 @@ Is a docker image with tools that you might need within a cluster of kubernetes 
 **Ismael Leiva**
 
 * [github/isma90](https://github.com/isma90)
+* [stackoverflow/isma90](https://stackoverflow.com/users/2043313/isma90?tab=profile)
 
 ### License
 
