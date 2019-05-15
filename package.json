@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git@github.com:isma90/sandbox-docker.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ismael Leiva",
+  "license": "MIT",
   "homepage": "https://github.com/isma90/sandbox-docker",
   "dependencies": {
     "express": "^4.16.4",
