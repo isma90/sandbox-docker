@@ -8,12 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/ProyectosPenta/redis.git"
+    "url": "git@github.com:isma90/sandbox-docker.git"
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/ProyectosPenta/redis#readme",
+  "homepage": "https://github.com/isma90/sandbox-docker",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "path": "^0.12.7"
   }
 }
