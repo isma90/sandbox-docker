@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sandbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: sandbox
+  template:
+    metadata:
+      labels:
+        component: sandbox
+    spec:
+      containers:
+        - name: sandbox
+          image: ismaleiva90/sandbox:latest
+          ports:
+            - containerPort: 8080
