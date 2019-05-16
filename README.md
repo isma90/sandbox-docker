@@ -37,6 +37,7 @@ You need to have configured `kubectl` client
 **Ismael Leiva**
 
 * [github/isma90](https://github.com/isma90)
+* [dockerhub/ismaleiva90](https://hub.docker.com/u/ismaleiva90)
 * [stackoverflow/isma90](https://stackoverflow.com/users/2043313/isma90?tab=profile)
 
 ### License
