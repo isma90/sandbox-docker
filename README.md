@@ -25,6 +25,13 @@ Entering inside the container
 
 `docker exec -it sandbox bash`
 
+#### Deploy to Kubernetes cluster
+
+You need to have configured `kubectl` client
+
+`kubectl apply -f k8s`
+
+
 ### Author
 
 **Ismael Leiva**
