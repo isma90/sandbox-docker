@@ -3,3 +3,6 @@ package-lock.json
 k8s
 .gitignore
 README.md
+publisher.sh
+.git
+Dockerfile
