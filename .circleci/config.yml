@@ -14,3 +14,27 @@ jobs:
             docker run -it ismaleiva90/sandbox:1.0.0 node -v
             docker run -it ismaleiva90/sandbox:1.0.0 npm -v
             docker run -it ismaleiva90/sandbox:1.0.0 pip --version
+  deploy-prod:
+    machine: true
+    environment:
+      TAG: 1.0.0
+    steps:
+      - run:
+          name: Deploy if tests pass and branch is Master
+          command: |
+            docker login -u ismaleiva90 -p $DOCKER_PASS
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: develop
+      - deploy-prod:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
