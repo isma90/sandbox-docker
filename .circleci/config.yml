@@ -2,19 +2,21 @@ version: 2
 jobs:
   build:
     machine: true
+    environment:
+      TAG: 1.0.0
     steps:
       - checkout
       - run:
           name: Build Image
           command: |
-            docker build -t ismaleiva90/sandbox:1.0.0 .
+            docker build -t ismaleiva90/sandbox:$TAG .
       - run:
           name: Test Image
           command: |
-            docker run -it ismaleiva90/sandbox:1.0.0 node -v
-            docker run -it ismaleiva90/sandbox:1.0.0 npm -v
-            docker run -it ismaleiva90/sandbox:1.0.0 pip --version
-  master:
+            docker run -it ismaleiva90/sandbox:$TAG node -v
+            docker run -it ismaleiva90/sandbox:$TAG npm -v
+            docker run -it ismaleiva90/sandbox:$TAG pip --version
+  deploy:
     machine: true
     environment:
       TAG: 1.0.0
@@ -32,9 +34,10 @@ workflows:
           filters:
             branches:
               only: develop
-      - master:
+      - deploy:
           requires:
             - build
+            - deploy
           filters:
             branches:
               only: master
