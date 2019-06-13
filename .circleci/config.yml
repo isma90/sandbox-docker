@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Build Image
+          command: |
+            docker build -t ismaleiva90/sandbox:1.0.0 .
+      - run:
+          name: Test Image
+          command: |
+            docker run -it ismaleiva90/sandbox:1.0.0 node -v
+            docker run -it ismaleiva90/sandbox:1.0.0 npm -v
+            docker run -it ismaleiva90/sandbox:1.0.0 pip --version
