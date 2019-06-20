@@ -16,6 +16,8 @@ RUN node -v && npm -v && pip --version
 
 COPY . .
 
+RUN npm install
+
 EXPOSE 8080
 
 CMD ["npm", "start"]
